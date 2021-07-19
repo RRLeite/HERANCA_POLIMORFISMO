@@ -33,9 +33,9 @@ public class Triangulo extends Figura {
     }
     
     @Override
-    public float calculaArea(Figura figura){
+    public float calculaArea(){
         
-        area = (figura.getAltura() * figura.getBase()/2);
+        area = (this.getAltura() * this.getBase()/2);
         return area;
         
     }

@@ -29,9 +29,9 @@ public class Retangulo extends Quadrado {
     }
     
     @Override
-   public float calculaArea(Figura figura){
+   public float calculaArea(){
        
-       area = figura.getBase() * figura.getAltura();
+       area = (this.getBase() * this.getAltura());
        return this.area;
    }
             

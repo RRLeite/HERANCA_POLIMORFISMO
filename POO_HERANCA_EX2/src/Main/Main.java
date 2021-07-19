@@ -6,6 +6,7 @@
 package Main;
 
 import Circulo.Circulo;
+import FigurasGeometricas.Figura;
 
 /**
  *
@@ -26,6 +27,17 @@ public class Main {
         arearaio = c1.calculaAreaRaio(c1.getRaio());
         areadiametro = c1.calculaAreaDiametro(c1.getDiametro());
         System.out.println(areadiametro + "----" + arearaio );
+        imprimeArea(c1);
+        
+        
+    }
+    
+    
+    public static void imprimeArea(Figura figura){
+        
+        System.out.println(figura.calculaArea());
+        
+        
     }
     
 }

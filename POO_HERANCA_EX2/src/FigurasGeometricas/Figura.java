@@ -38,7 +38,7 @@ public class Figura {
         return base;
     }
     
-   public float calculaArea(Figura figura){
+   public float calculaArea(){
        
        return this.area;
    }

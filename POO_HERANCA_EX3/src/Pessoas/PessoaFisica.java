@@ -4,51 +4,52 @@ pessoa física e pessoa jurídica. Para pessoa física, guarde o nome, o CPF, o 
 Para pessoa jurídica, guarde a razão social, o CNPJ, o endereço e o faturamento. Permita tanto listar todos os contatos da agenda quanto buscar um contato específico pelo seu CPF,
 se for pessoa física, ou pelo CNPJ, se for pessoa jurídica. Use herança e polimorfismo.
  */
-package Agenda;
+package Pessoas;
+
+import Agenda.Contato;
 
 /**
  *
  * @author Roberto Leite
- * Nome para classe de PF é O nome do individuo e para PJ e a razao social
  */
-public class Contato {
+public class PessoaFisica extends Contato {
     
-    protected String nome;
-    protected String endereco;
-    
-    
-    
+    int cpf;
+    String dataaniversario;
 
-   
-    public Contato(){
-        
+    public PessoaFisica(String nome, int cpf, String dataaniversario, String endereco) {
+        super(nome, endereco);
+        this.cpf = cpf;
+        this.dataaniversario = dataaniversario;
+    }
+    
+    
+    @Override
+     public String getNome() {
+        return this.nome;
     }
 
-    public Contato(String nome, String endereco) {
-        this.nome = nome;
-        this.endereco = endereco;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
+    @Override
     public String getEndereco() {
-        return endereco;
+        return this.endereco;
     }
 
+    @Override
     public void atualizaNome(String nome) {
         this.nome = nome;
     }
 
+    @Override
     public void atualizaEndereco(String endereco) {
         this.endereco = endereco;
     }
     
+    public void mostraIdade(PessoaFisica pf){
+        
+        System.out.println("A data de aniversario e: "+ this.dataaniversario);
+        
+    }
     
-    
-    
-   
     
     
 }

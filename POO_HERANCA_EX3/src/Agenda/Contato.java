@@ -11,7 +11,7 @@ package Agenda;
  * @author Roberto Leite
  * Nome para classe de PF é O nome do individuo e para PJ e a razao social
  */
-public class Contato {
+public class Contato extends Agenda {
     
     protected String nome;
     protected String endereco;
@@ -27,6 +27,7 @@ public class Contato {
     public Contato(String nome, String endereco) {
         this.nome = nome;
         this.endereco = endereco;
+        
     }
 
     public String getNome() {

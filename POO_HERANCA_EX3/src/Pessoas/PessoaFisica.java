@@ -1,7 +1,8 @@
 /*
 Faça um programa de agenda que permita guardar dois tipos de contato: 
 pessoa física e pessoa jurídica. Para pessoa física, guarde o nome, o CPF, o endereço e a data de aniversário. 
-Para pessoa jurídica, guarde a razão social, o CNPJ, o endereço e o faturamento. Permita tanto listar todos os contatos da agenda quanto buscar um contato específico pelo seu CPF,
+Para pessoa jurídica, guarde a razão social, o CNPJ, o endereço e o faturamento. 
+Permita tanto listar todos os contatos da agenda quanto buscar um contato específico pelo seu CPF,
 se for pessoa física, ou pelo CNPJ, se for pessoa jurídica. Use herança e polimorfismo.
  */
 package Pessoas;
@@ -14,8 +15,8 @@ import Agenda.Contato;
  */
 public class PessoaFisica extends Contato {
     
-    int cpf;
-    String dataaniversario;
+    protected int cpf;
+    protected String dataaniversario;
 
     public PessoaFisica(String nome, int cpf, String dataaniversario, String endereco) {
         super(nome, endereco);
@@ -33,6 +34,15 @@ public class PessoaFisica extends Contato {
     public String getEndereco() {
         return this.endereco;
     }
+
+    public int getCpf() {
+        return cpf;
+    }
+
+    public String getDataaniversario() {
+        return dataaniversario;
+    }
+    
 
     @Override
     public void atualizaNome(String nome) {

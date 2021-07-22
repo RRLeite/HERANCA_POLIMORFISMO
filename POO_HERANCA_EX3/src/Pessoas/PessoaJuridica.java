@@ -13,8 +13,8 @@ import Agenda.Contato;
  */
 public class PessoaJuridica extends Contato {
     
-    int cnpj;
-    float faturamento;
+    protected int cnpj;
+    protected float faturamento;
 
     
 
@@ -35,6 +35,15 @@ public class PessoaJuridica extends Contato {
     public String getEndereco() {
         return this.endereco;
     }
+
+    public int getCnpj() {
+        return cnpj;
+    }
+
+    public float getFaturamento() {
+        return faturamento;
+    }
+    
 
     @Override
     public void atualizaNome(String nome) {

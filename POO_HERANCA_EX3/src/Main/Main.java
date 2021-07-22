@@ -5,8 +5,8 @@
  */
 package Main;
 
+import Agenda.Agenda;
 import Pessoas.PessoaFisica;
-import java.util.ArrayList;
 
 /**
  *
@@ -20,8 +20,13 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        PessoaFisica p1 = new p1 PessoaFisica();
-        ArrayList<PessoaFisica> agendaPf = new ArrayList();
+        PessoaFisica pf1 = new PessoaFisica("Roberto", 15038008, "18/07/1993", "Minha casa");
+        
+        //Agenda.addContato(pf1);
+        Agenda.printaPf(pf1);
+        Agenda.procuraContato(pf1);
+        
+        
         
         
         
